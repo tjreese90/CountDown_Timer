@@ -6,7 +6,9 @@ const minsEl    = document.getElementById('mins');
 
 const secondsEl = document.getElementById('secs');
 
+//Create a function that allows the user to input and update the time or to see their graudation
 
+// Create cool promet messages below timer and maybe add a lofi-hip player.
 
 
 const GradYear = "15 may 2022";
@@ -27,17 +29,31 @@ function countdown() {
 
     const seconds = Math.floor ( totalSeconds - 5) % 60;
 
+    //maybe add Month
     
     daysEl.innerHTML = days;
 
-    hoursEl.innerHTML = hours;
+    hoursEl.innerHTML = formatTime(hours);
 
-    minsEl.innerHTML = minutes;
+    minsEl.innerHTML = formatTime(minutes);
 
-    secondsEl.innerHTML = seconds;
+    secondsEl.innerHTML = formatTime(seconds);
 
 
 }
+
+// add 0 for seconds
+function formatTime(time) {
+    return time < 10 ? `0${time}` : time;
+}
+
+//TODO: Add end of countdown functionlity.
+
+// function endOfCountDown(time) {
+
+
+
+// }
 
 
 //inital call
